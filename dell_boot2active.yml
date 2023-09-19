@@ -1,0 +1,22 @@
+---
+- hosts: dellos6_switch1
+  connection: network_cli
+  gather_facts: no
+  
+  collections:
+    - dellemc.os6.os6_command
+  vars:
+    - ansible_python_interpreter: /usr/bin/python3
+  vars_files:
+    - /etc/ansible/group_vars/dellos
+
+  tasks:
+   - name: "Set boot partition to active"
+     os6_command:
+       commands: ['boot system active']
+
+   - name: "Show next active boot after setting boot partition"
+     os6_command:
+       commands: ['show version']
+     register: show_system_id
+   - debug: var=show_system_id

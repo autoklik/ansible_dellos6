@@ -1,0 +1,17 @@
+---
+- hosts: dellos6_switch1
+  connection: network_cli
+  gather_facts: no
+
+#  vars:
+#   - ansible_python_interpreter: /usr/bin/python3
+  vars_files:
+    - /etc/ansible/group_vars/dellos
+
+  tasks:
+   - name: Run Show Running Configuration
+     dellos6_command:
+       commands: ['show running-config']
+     register: show_running_config
+
+   - debug: var=show_running_config

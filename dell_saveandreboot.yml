@@ -1,0 +1,30 @@
+## Save and Reboot Switch
+---
+- hosts: dellos6_switch1
+  connection: network_cli
+  gather_facts: no
+
+  vars:
+#    - ansible_python_interpreter: /usr/bin/python3   
+    ansible_command_timeout: 300
+  vars_files:
+    - /etc/ansible/group_vars/dellos
+
+  tasks:
+   - name: "Save running configuration to memory."
+     dellos6_config:
+       commands:  
+         - command: 'do copy running-config startup-config'
+           prompt: '\(y/n\)\s?$'
+           answer: "y"
+     register: handle_prompt
+
+   - name: "Reboot Switch."
+     dellos6_config:
+       commands:  
+         - command: 'do reload'
+           prompt: '\(y/n\)\s?$'
+           answer: "y"
+     ignore_errors: True
+
+
