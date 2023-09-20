@@ -5,8 +5,8 @@
 
 #  vars:
 #   - ansible_python_interpreter: /usr/bin/python3
-  vars_files:
-    - /etc/ansible/group_vars/dellos
+#  vars_files:
+#    - /etc/ansible/group_vars/dellos
 
   tasks:
    - name: Run Show Running Configuration
