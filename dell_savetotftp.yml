@@ -14,7 +14,7 @@
   - name: "Save running configuration to TFTP."
     dellos6_config:
       commands:  
-        - command: 'do copy running-config tftp://172.16.7.24/10.100.200.13'
+        - command: 'do copy running-config tftp://172.16.100.100/192.168.1.100'
           prompt: '\(y/n\)\s?$'
           answer: "y"
     register: handle_prompt
