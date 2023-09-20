@@ -1,3 +1,4 @@
+# Set the hostname for the Dell EMC OS6 Device
 ---
 - hosts: dellos6_switch1
   connection: network_cli
