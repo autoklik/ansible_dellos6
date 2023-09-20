@@ -7,8 +7,8 @@
   vars:
 #    - ansible_python_interpreter: /usr/bin/python3   
     ansible_command_timeout: 300
-  vars_files:
-    - /etc/ansible/group_vars/dellos
+#  vars_files:
+#    - /etc/ansible/group_vars/dellos ---> comment out if you use to keep your variables inside a folder
 
   tasks:
    - name: "Save running configuration to memory."
