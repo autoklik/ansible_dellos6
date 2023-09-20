@@ -1,0 +1,4 @@
+* Install Dell collections (do not use sudo)
+    * ansible-galaxy collection install dellemc.os6
+    * ansible-galaxy install dell-networking.dellos-copy-config (optional)
+    * ansible-galaxy install dell-networking.dellos-image-upgrade (optional)
