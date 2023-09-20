@@ -4,7 +4,7 @@
   connection: network_cli
   gather_facts: no
 
-  vars:
+#  vars:
 #    - ansible_python_interpreter: /usr/bin/python3   
     ansible_command_timeout: 300
 #  vars_files:
