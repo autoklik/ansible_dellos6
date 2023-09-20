@@ -5,10 +5,10 @@
   
   collections:
     - dellemc.os6.os6_command
-  vars:
-    - ansible_python_interpreter: /usr/bin/python3
-  vars_files:
-    - /etc/ansible/group_vars/dellos
+ # vars:
+ #   - ansible_python_interpreter: /usr/bin/python3
+ # vars_files:
+ #   - /etc/ansible/group_vars/dellos
 
   tasks:
    - name: "Set boot partition to active"
