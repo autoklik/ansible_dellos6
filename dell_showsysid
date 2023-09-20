@@ -9,7 +9,7 @@
 #    - /etc/ansible/group_vars/dellos
 
   tasks:
-   - name: "Dell Show Commands"
+   - name: "Show Dell Switch Serial Number"
      dellos6_command:
        commands: ['show system id']
      register: show_system_id
