@@ -3,10 +3,10 @@
   connection: network_cli
   gather_facts: no
 
-  vars:
-   - ansible_python_interpreter: /usr/bin/python3
-  vars_files:
-    - /etc/ansible/group_vars/dellos
+#  vars:
+#   - ansible_python_interpreter: /usr/bin/python3
+#  vars_files:
+#    - /etc/ansible/group_vars/dellos
 
   tasks:
    - name: "Dell Show Commands"
